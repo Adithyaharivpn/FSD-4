@@ -43,7 +43,7 @@ app.delete('/:id',async(req,res)=>{
 //update
 app.put('/:id',async(req,res)=>{
     try {
-        await empModel.findByIdAndUpdate(req.params.id,req.body)
+        await sModel.findByIdAndUpdate(req.params.id,req.body)
         res.send("Data Updated")//set body in postman
     } catch (error) {
         console.log(error)
